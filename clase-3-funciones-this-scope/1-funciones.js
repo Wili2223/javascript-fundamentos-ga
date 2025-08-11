@@ -4,6 +4,7 @@
 // - Leé cada consigna con atención y escribí tu código donde se indica.
 // - Usá `console.log()` para mostrar los resultados cuando se indique.
 // - Ejecutá este archivo con el comando: node 1-funciones.js
+console.log("HOLA MUNDO");
 
 //--------------------------------------------------
 // 1. Teoría: ¿Qué es una función?
