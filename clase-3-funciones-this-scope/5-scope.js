@@ -10,10 +10,15 @@
 //--------------------------------------------------
 
 // 👉 Paso 1: Declarar una variable global llamada 'mensajeGlobal' con el valor "Hola desde el ámbito global".
+let mensajeGlobal = "Hola desde el ámbito global";
 
 // 👉 Paso 2: Crear una función llamada 'mostrarMensajeGlobal' que muestre en consola el valor de 'mensajeGlobal'.
+function mostrarMensajeGlobal() {
+  console.log(mensajeGlobal);
+}
 
 // 👉 Paso 3: Llamar a la función 'mostrarMensajeGlobal' y verificar que se muestre el mensaje en consola.
+mostrarMensajeGlobal();
 
 //--------------------------------------------------
 // 2. Function Scope
@@ -22,9 +27,15 @@
 // 👉 Paso 4: Crear una función llamada 'mostrarMensajeLocal'.
 // Dentro de esta función, declará una variable llamada 'mensajeLocal' con el valor "Hola desde el ámbito de función".
 // Mostrá en consola el valor de 'mensajeLocal' dentro de la función.
+function mostrarMensajeLocal() {
+  let mensajeLocal = "Hola desde el ámbito de función";
+  console.log(mensajeLocal);
+}
+mostrarMensajeLocal();
 
 // 👉 Paso 5: Intentá mostrar en consola el valor de 'mensajeLocal' fuera de la función y explicá en un comentario qué ocurre y por qué.
-
+  //onsole.log(mensajeLocal); 
+  
 //--------------------------------------------------
 // 3. Block Scope
 //--------------------------------------------------
@@ -32,8 +43,20 @@
 // 👉 Paso 6: Crear una función llamada 'mostrarMensajeBloque'.
 // Dentro de esta función, usá un bloque (por ejemplo, un if) y declará una variable en el bloque con let o const llamada 'mensajeBloque' con el valor "Hola desde el ámbito de bloque".
 // Mostrá en consola el valor de 'mensajeBloque' dentro del bloque.
+function mostrarMensajeBloque() {
+  if (true) {
+    let mensajeBloque = "Hola desde el ámbito de bloque";
+    console.log(mensajeBloque); 
+  }
 
 // 👉 Paso 7: Intentá mostrar en consola el valor de 'mensajeBloque' fuera del bloque y explicá en un comentario qué ocurre y por qué.
+ //onsole.log(mensajeBloque);
+  // ❌ ReferenceError: mensajeBloque is not defined
+  // Porque 'mensajeBloque' fue declarada con let dentro del bloque if
+  // y solo existe dentro de ese bloque (block scope).
+}
+
+mostrarMensajeBloque();
 
 //--------------------------------------------------
 // 4. Selección de opción correcta: Scope
@@ -44,21 +67,21 @@
 // Opción A: Las variables declaradas en el ámbito global pueden ser accedidas desde cualquier parte del código.
 // Opción B: Las variables declaradas en el ámbito global solo pueden ser accedidas dentro de funciones.
 // Opción C: Las variables declaradas en el ámbito global no existen.
-let respuestaScope1 = '';
+let respuestaScope1 = "A";
 
 // 👉 Paso 9: Seleccioná la opción correcta sobre el Function Scope:
 // Guardá la letra de la opción correcta en la variable 'respuestaScope2'. Ejemplo: let respuestaScope2 = "C";
 // Opción A: Las variables declaradas dentro de una función pueden ser accedidas desde cualquier parte del código.
 // Opción B: Las variables declaradas dentro de una función solo pueden ser accedidas dentro de esa función.
 // Opción C: Las variables declaradas dentro de una función no existen.
-let respuestaScope2 = '';
+let respuestaScope2 = "B";
 
 // 👉 Paso 10: Seleccioná la opción correcta sobre el Block Scope:
 // Guardá la letra de la opción correcta en la variable 'respuestaScope3'. Ejemplo: let respuestaScope3 = "B";
 // Opción A: Las variables declaradas con let o const dentro de un bloque pueden ser accedidas desde cualquier parte del código.
 // Opción B: Las variables declaradas con let o const dentro de un bloque solo pueden ser accedidas dentro de ese bloque.
 // Opción C: Las variables declaradas con let o const dentro de un bloque no existen.
-let respuestaScope3 = '';
+let respuestaScope3 = "B";
 
 //--------------------------------------------------
 // 5. ¿Qué es el Scope?
@@ -69,7 +92,7 @@ let respuestaScope3 = '';
 // Opción A: Es el contexto donde las variables y funciones están disponibles para ser accedidas o usadas.
 // Opción B: Es el conjunto de todas las funciones declaradas en un archivo.
 // Opción C: Es el tipo de dato que tiene una variable.
-let respuestaScope4 = '';
+let respuestaScope4 = "A";
 
 //--------------------------------------------------
 // 6. Diferencia práctica entre Global, Function y Block Scope
@@ -80,7 +103,7 @@ let respuestaScope4 = '';
 // Opción A: Global Scope y Function Scope son iguales, pero Block Scope es diferente.
 // Opción B: Global Scope está disponible en todo el código, Function Scope solo dentro de funciones, y Block Scope solo dentro de bloques.
 // Opción C: No hay diferencia entre los tres tipos de scope.
-let respuestaScope5 = '';
+let respuestaScope5 = "B";
 
 // No modifiques el código debajo de este comentario
 module.exports = {
