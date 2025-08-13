@@ -13,12 +13,26 @@
 // 👉 Paso 1: Creá una función llamada 'crearContador'.
 // Dentro de esta función, declará una variable llamada 'contador' con valor inicial 0.
 // La función debe retornar otra función que incremente el valor de 'contador' en 1 y lo retorne.
-
+function crearContador() {
+  let contador = 0; 
+  return function () {
+    contador += 1;
+    return contador; 
+  };
+}
 
 // 👉 Paso 2: Usá 'crearContador' para crear dos contadores independientes: 'contador1' y 'contador2'.
+const contador1 = crearContador();
+const contador2 = crearContador();
 
 // 👉 Paso 3: Mostrá en consola el resultado de llamar a 'contador1' tres veces y a 'contador2' dos veces.
 // Verificá que ambos contadores mantengan su propio estado.
+console.log(contador1()); 
+console.log(contador1()); 
+console.log(contador1()); 
+
+console.log(contador2()); 
+console.log(contador2()); 
 
 //--------------------------------------------------
 // 2. Closure con parámetros
@@ -27,13 +41,22 @@
 // 👉 Paso 4: Creá una función llamada 'crearSaludo'.
 // Esta función debe recibir un parámetro llamado 'saludo'.
 // La función debe retornar otra función que reciba un nombre y retorne un mensaje combinando el saludo y el nombre.
+function crearSaludo(saludo) {
+  return function (nombre) {
+    return `${saludo}${nombre}`;
+  };
+}
 
 
 // 👉 Paso 5: Usá 'crearSaludo' para crear dos funciones: 'saludarEnEspañol' y 'saludarEnIngles'.
 // 'saludarEnEspañol' debe usar el saludo "Hola".
 // 'saludarEnIngles' debe usar el saludo "Hello".
+const saludarEnEspañol = crearSaludo("Hola");
+const saludarEnIngles = crearSaludo("Hello");
 
 // 👉 Paso 6: Mostrá en consola el resultado de llamar a 'saludarEnEspañol' con "Juan" y a 'saludarEnIngles' con "John".
+console.log(saludarEnEspañol("Juan")); 
+console.log(saludarEnIngles("John"));
 
 //--------------------------------------------------
 // 3. Selección de opción correcta: Closures
@@ -44,14 +67,14 @@
 // Opción A: Es una función que recuerda el scope donde fue creada, incluso si se ejecuta fuera de ese contexto.
 // Opción B: Es una función que solo puede ejecutarse dentro de su propio scope.
 // Opción C: Es una función que no puede recibir parámetros.
-let respuestaClosure1 = '';
+let respuestaClosure1 = 'A';
 
 // 👉 Paso 8: Seleccioná la opción correcta sobre el uso de Closures:
 // Guardá la letra de la opción correcta en la variable 'respuestaClosure2'. Ejemplo: let respuestaClosure2 = "C";
 // Opción A: Los Closures no son útiles en JavaScript moderno.
 // Opción B: Los Closures son útiles para crear variables globales.
 // Opción C: Los Closures son útiles para crear funciones con estado privado.
-let respuestaClosure2 = '';
+let respuestaClosure2 = 'C';
 
 //--------------------------------------------------
 // 4. Diferencia práctica entre Closures y funciones normales
@@ -62,14 +85,15 @@ let respuestaClosure2 = '';
 // Opción A: Las funciones normales no pueden retornar otras funciones.
 // Opción B: Los Closures pueden recordar el estado de variables incluso después de que la función externa haya terminado.
 // Opción C: No hay diferencia entre Closures y funciones normales.
-let respuestaClosure3 = '';
+let respuestaClosure3 = 'B';
 
 //--------------------------------------------------
 // 5. Reflexión sobre Closures
 //--------------------------------------------------
 
 // 👉 Paso 10: Explicá en un comentario un caso práctico donde usarías un Closure.
-// Respuesta: Un caso práctico sería crear un contador que mantenga su propio estado privado, como en el ejercicio 1. Esto es útil para evitar que otras partes del código modifiquen directamente el estado del contador.
+// Respuesta: Un caso práctico sería crear un contador que mantenga su propio estado privado, como en el ejercicio 1.
+//  Esto es útil para evitar que otras partes del código modifiquen directamente el estado del contador.
 
 //--------------------------------------------------
 // 6. Closure para manejar una lista de tareas (Avanzado)
@@ -81,16 +105,36 @@ let respuestaClosure3 = '';
 // - agregarTarea: recibe una tarea (string) y la agrega al array 'tareas'.
 // - listarTareas: retorna el array 'tareas'.
 // - eliminarTarea: recibe una tarea (string) y la elimina del array 'tareas' si existe.
+const crearListaDeTareas = () => {
+  let tareas = [];
+
+  return {
+    agregarTarea: tarea => tareas.push(tarea),
+    listarTareas: () => tareas,
+    eliminarTarea: tarea => {
+      const indice = tareas.indexOf(tarea);
+      if (indice !== -1) tareas.splice(indice, 1);
+    }
+  };
+};
 
 
 // 👉 Paso 12: Usá 'crearListaDeTareas' para crear una lista de tareas llamada 'miLista'.
+const miLista = crearListaDeTareas();
 
 // 👉 Paso 13: Agregá las tareas "Estudiar JavaScript" y "Hacer ejercicio" a 'miLista'.
 // Mostrá en consola el resultado de listar las tareas.
+miLista.agregarTarea("Aprender JavaScript");
+miLista.agregarTarea("Hacer ejercicio");
+
+console.log(miLista.listarTareas()); 
+
+console.log(miLista.listarTareas()); 
+
 
 // 👉 Paso 14: Eliminá la tarea "Hacer ejercicio" de 'miLista'.
 // Mostrá en consola el resultado de listar las tareas nuevamente.
-
+miLista.eliminarTarea("Hacer ejercicio");
 
 // No modifiques el código debajo de este comentario
 module.exports = {
