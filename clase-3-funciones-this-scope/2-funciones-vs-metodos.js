@@ -14,7 +14,7 @@
 // Opción A: No hay diferencia, ambos son lo mismo.
 // Opción B: Una función es un bloque de código independiente, mientras que un método está asociado a un objeto.
 // Opción C: Un método es una función que siempre retorna un valor.
-let respuestaTeoria1 =' B';
+let respuestaTeoria1 ='B';
 
 //--------------------------------------------------
 // 2. Crear una función independiente
@@ -22,7 +22,7 @@ let respuestaTeoria1 =' B';
 
 // 👉 Paso 2: Declarar una función llamada 'saludar' que reciba un nombre como parámetro y retorne un saludo.
 function saludar(nombre) {
-  return `Hola, ${nombre}`;
+  return `Hola, ${nombre}!`;
 }
 
 // 👉 Paso 3: Mostrá en consola el resultado de llamar a 'saludar' con el valor "Juan".
@@ -35,9 +35,9 @@ console.log(saludar("Juan"));
 // 👉 Paso 4: Crear un objeto llamado 'persona' con una propiedad 'nombre' y un método 'saludar'.
 // El método debe retornar un saludo usando la propiedad 'nombre'.
 let persona = {
-  nombre: "Carlos",
+  nombre: "Ana",
   saludar: function() {
-    return `Hola, mi nombre es ${this.nombre}`;
+    return `Hola, soy ${this.nombre}!`;
   }
 };
 
