@@ -10,10 +10,12 @@
 //--------------------------------------------------
 
 // 👉 Paso 1: Creá un array llamado 'frutas' que contenga: "manzana", "banana", "pera".
+let frutas = ["manzana", "banana", "pera"];
 
 // 👉 Paso 2: Agregá "naranja" al final del array 'frutas' usando un método que mute el array original.
-
+frutas.push("naranja")
 // 👉 Paso 3: Eliminá el último elemento del array 'frutas' usando un método que mute el array original.
+frutas.pop();
 
 //--------------------------------------------------
 // 2. Inmutabilidad en Arrays
@@ -23,7 +25,12 @@
 // - Un array de frutas
 // - Una nueva fruta
 // La función debe retornar un nuevo array con la nueva fruta agregada, sin modificar el array original.
+function agregarFrutaInmutable(frutas, nuevaFruta) {
+  return [...frutas, nuevaFruta];
+}
+const frutasActualizado = agregarFrutaInmutable(frutas, "naranja");
 
+onsole.log(frutasActualizado);
 // 👉 Paso 5: Usá la función 'agregarFrutaInmutable' con el array 'frutas' y "kiwi".
 // Guardá el resultado en una variable llamada 'nuevoArrayFrutas'.
 
