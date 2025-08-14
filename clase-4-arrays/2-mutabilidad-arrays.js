@@ -28,11 +28,14 @@ frutas.pop();
 function agregarFrutaInmutable(frutas, nuevaFruta) {
   return [...frutas, nuevaFruta];
 }
-const frutasActualizado = agregarFrutaInmutable(frutas, "naranja");
+let frutasActualizado = agregarFrutaInmutable(frutas, "naranja");
 
 onsole.log(frutasActualizado);
+
 // 👉 Paso 5: Usá la función 'agregarFrutaInmutable' con el array 'frutas' y "kiwi".
 // Guardá el resultado en una variable llamada 'nuevoArrayFrutas'.
+let agregarFrutaInmutable = (array, fruta) => [...array, fruta];
+let nuevoArrayFrutas = agregarFrutaInmutable(frutas, "kiwi");
 
 //--------------------------------------------------
 // 3. Comprobación de Arrays
@@ -40,6 +43,7 @@ onsole.log(frutasActualizado);
 
 // 👉 Paso 6: Creá una función llamada 'esArray' que reciba un parámetro
 // y retorne true si es un array o false si no lo es.
+let esArray = valor => Array.isArray(valor);
 
 //--------------------------------------------------
 // 4. Selección de opción correcta
@@ -50,21 +54,21 @@ onsole.log(frutasActualizado);
 // Opción A: Mutar un array significa crear una nueva copia del array.
 // Opción B: Mutar un array significa modificar el array original.
 // Opción C: Los arrays no pueden ser mutados.
-let respuestaMutabilidad1 = '';
+let respuestaMutabilidad1 = 'B';
 
 // 👉 Paso 8: Seleccioná la opción correcta sobre la inmutabilidad:
 // Guardá la letra de la opción correcta en la variable 'respuestaMutabilidad2'.
 // Opción A: La inmutabilidad no es posible con arrays.
 // Opción B: La inmutabilidad significa que nunca podemos cambiar un array.
 // Opción C: La inmutabilidad significa crear nuevas copias en lugar de modificar el original.
-let respuestaMutabilidad2 = '';
+let respuestaMutabilidad2 = 'C';
 
 // 👉 Paso 9: Seleccioná la opción correcta sobre métodos de array:
 // Guardá la letra de la opción correcta en la variable 'respuestaMutabilidad3'.
 // Opción A: push() y pop() son métodos inmutables.
 // Opción B: push() y pop() son métodos que mutan el array original.
 // Opción C: push() es mutable y pop() es inmutable.
-let respuestaMutabilidad3 = '';
+let respuestaMutabilidad3 = 'B';
 
 // No modifiques el código debajo de este comentario
 module.exports = {
