@@ -30,11 +30,11 @@ function agregarFrutaInmutable(frutas, nuevaFruta) {
 }
 let frutasActualizado = agregarFrutaInmutable(frutas, "naranja");
 
-onsole.log(frutasActualizado);
+
 
 // 👉 Paso 5: Usá la función 'agregarFrutaInmutable' con el array 'frutas' y "kiwi".
 // Guardá el resultado en una variable llamada 'nuevoArrayFrutas'.
-let agregarFrutaInmutable = (array, fruta) => [...array, fruta];
+
 let nuevoArrayFrutas = agregarFrutaInmutable(frutas, "kiwi");
 
 //--------------------------------------------------
