@@ -10,19 +10,31 @@
 //--------------------------------------------------
 
 // 👉 Paso 1: Creá un array llamado 'numeros' con los valores [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
-
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // 👉 Paso 2: Usando filter(), creá un nuevo array llamado 'numerosPares'
 // que contenga solo los números pares del array 'numeros'.
-
+let numerosPares = numeros.filter(num => num % 2 === 0);
 
 // 👉 Paso 3: Creá un array llamado 'personas' con objetos que tengan las propiedades 'nombre' y 'edad':
 // Por ej: [{nombre: "Ana", edad: 25}]
+let personas = [
+  { nombre: "Ana", edad: 15 },
+  { nombre: "Juan", edad: 30 },
+  { nombre: "María", edad: 12 },
+  { nombre: "Carlos", edad: 28 }
+];
 
 
 // 👉 Paso 4: Usando filter(), creá un nuevo array llamado 'mayoresDeEdad'
 // que contenga solo las personas que tienen 18 años o más.
-
+let mayoresDeEdad = [
+  { nombre: "Ana", edad: 23 },
+  { nombre: "Juan", edad: 17 },
+  { nombre: "María", edad: 22 },
+  { nombre: "Carlos", edad: 16 }
+];
+ mayoresDeEdad = personas.filter(persona => persona.edad >= 18);
 
 //--------------------------------------------------
 // 2. reduce(): Transformar en un único valor
@@ -30,16 +42,26 @@
 
 // 👉 Paso 5: Usando reduce(), calculá la suma de todos los números del array 'numeros'
 // y guardala en una variable llamada 'sumaTotal'.
-
+let sumaTotal = numeros.reduce((acumulador, numeroActual) => acumulador + numeroActual, 0);
 
 // 👉 Paso 6: Usando reduce(), encontrá el número más grande del array 'numeros'
 // y guardalo en una variable llamada 'maximo'.
-
+let maximo = numeros.reduce((acumulador, numeroActual) => {
+  return numeroActual > acumulador ? numeroActual : acumulador;
+}, numeros[0]);
 
 // 👉 Paso 7: Usando reduce(), creá un objeto llamado 'resumenEdades' que contenga:
 // - propiedad 'menores': cantidad de personas menores de 18
 // - propiedad 'adultos': cantidad de personas de 18 o más
 // Usá el array 'personas' para esto.
+let resumenEdades = personas.reduce((acumulador, persona) => {
+  if (persona.edad < 18) {
+    acumulador.menores += 1;
+  } else {
+    acumulador.adultos += 1;
+  }
+  return acumulador;
+}, { menores: 0, adultos: 0 });
 
 
 //--------------------------------------------------
@@ -51,21 +73,21 @@
 // Opción A: Modifica el array original.
 // Opción B: Retorna un nuevo array con los elementos que cumplen la condición.
 // Opción C: Retorna un único valor.
-let respuestaFilter = '';
+let respuestaFilter = 'B';
 
 // 👉 Paso 9: Seleccioná la opción correcta sobre reduce():
 // Guardá la letra de la opción correcta en la variable 'respuestaReduce'.
 // Opción A: Solo sirve para sumar números.
 // Opción B: Siempre retorna un array nuevo.
 // Opción C: Puede transformar un array en cualquier otro tipo de valor.
-let respuestaReduce = '';
+let respuestaReduce = 'C';
 
 // 👉 Paso 10: Seleccioná la opción correcta sobre el uso combinado de filter() y reduce():
 // Guardá la letra de la opción correcta en la variable 'respuestaCombinada'.
 // Opción A: No se pueden usar juntos.
 // Opción B: Se pueden encadenar para filtrar y luego transformar datos.
 // Opción C: Solo funcionan con arrays de números.
-let respuestaCombinada = '';
+let respuestaCombinada = 'B';
 
 // No modifiques el código debajo de este comentario
 module.exports = {
