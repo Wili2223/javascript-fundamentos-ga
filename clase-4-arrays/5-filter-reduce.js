@@ -19,7 +19,7 @@ let numerosPares = numeros.filter(num => num % 2 === 0);
 // 👉 Paso 3: Creá un array llamado 'personas' con objetos que tengan las propiedades 'nombre' y 'edad':
 // Por ej: [{nombre: "Ana", edad: 25}]
 let personas = [
-  { nombre: "Ana", edad: 15 },
+  { nombre: "Ana", edad: 25 },
   { nombre: "Juan", edad: 30 },
   { nombre: "María", edad: 12 },
   { nombre: "Carlos", edad: 28 }
@@ -28,13 +28,8 @@ let personas = [
 
 // 👉 Paso 4: Usando filter(), creá un nuevo array llamado 'mayoresDeEdad'
 // que contenga solo las personas que tienen 18 años o más.
-let mayoresDeEdad = [
-  { nombre: "Ana", edad: 23 },
-  { nombre: "Juan", edad: 17 },
-  { nombre: "María", edad: 22 },
-  { nombre: "Carlos", edad: 16 }
-];
- mayoresDeEdad = personas.filter(persona => persona.edad >= 18);
+
+let mayoresDeEdad = personas.filter(persona => persona.edad >= 18);
 
 //--------------------------------------------------
 // 2. reduce(): Transformar en un único valor
