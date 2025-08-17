@@ -4,7 +4,7 @@
 // - Leé cada consigna con atención y escribí tu código donde se indica.
 // - Usá `console.log()` para mostrar los resultados cuando se indique.
 // - Ejecutá este archivo con el comando: node 1-arrays-basicos.js
-consle.log("lo que hagas en vida resonara en al eternidad")
+
 //--------------------------------------------------
 // 1. Creación de Arrays
 //--------------------------------------------------
@@ -18,7 +18,7 @@ let numeros = [1, 2, 3, 4, 5]
 // - Un booleano
 // - Un objeto simple { clave: valor }
 // - Otro array
-let mixto = [1, "wili", true, {clave: "valor" } [1, 2, 3]];
+let mixto = [1, "wili", true, {clave: "valor" }, [1, 2, 3]];
 
 //--------------------------------------------------
 // 2. Acceso a elementos
@@ -67,10 +67,10 @@ let respuestaArray3 = 'C';
 // - El número 42
 // - El booleano true
 // - El array [1, 2, 3]
-let = datos ["Hola", 42, true, [1, 2, 3]];
+let datos = ["Hola", 42, true, [1, 2, 3]];
 
 // 👉 Paso 8: Mostrá en consola el segundo elemento del array 'datos'.
-console.log(datos[1]);
+console.log(datos[0]);
 
 // No modifiques el código debajo de este comentario
 module.exports = {
