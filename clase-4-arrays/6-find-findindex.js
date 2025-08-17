@@ -11,12 +11,13 @@
 
 // 👉 Paso 1: Creá un array llamado 'productos' con objetos que tengan las propiedades 'nombre' y 'precio' (con diferentes valores):
 // Agrega el primero: {nombre: "Telefono", precio: 1200}
-let productos = [
-  { nombre: "computadora", precio: 100 },
-  { nombre: "table", precio: 500 },
-  { nombre: "telefono", precio: 1000 },
-
+const productos = [
+  { nombre: "Tablet", precio: 500 },
+  { nombre: "Celular", precio: 300 },
+  { nombre: "Auriculares", precio: 200 },
+  { nombre: "Monitor", precio: 800 }
 ];
+
 
 // 👉 Paso 2: Usando find(), encontrá el primer producto que cueste menos de 400
 // y guardalo en una variable llamada 'productoEconomico'.
@@ -41,12 +42,12 @@ let productoBuscado = productos.find(pepito => {
 
 // 👉 Paso 4: Usando findIndex(), encontrá la posición del producto que cuesta 500
 // y guardala en una variable llamada 'posicionProducto'.
-let posicionProducto = productos.findIndex(producto => producto === 500);
+let posicionProducto = productos.findIndex(producto => producto.precio === 500);
 
 
 // 👉 Paso 5: Usando findIndex(), encontrá la posición de un producto que cueste 1000
 // y guardala en una variable llamada 'posicionNoEncontrada'.
-let posicionNoEncontrada = productos.findIndex(producto => producto === 1000);
+let posicionNoEncontrada = productos.findIndex(producto => producto.precio === 1000);
 
 
 //--------------------------------------------------
@@ -69,7 +70,7 @@ function buscarProducto(productos, precioMax) {
 
   return { producto, posicion };
 }
-//console.log(buscarProducto(productos, 700));
+
 
 //--------------------------------------------------
 // 4. Selección de opción correcta
