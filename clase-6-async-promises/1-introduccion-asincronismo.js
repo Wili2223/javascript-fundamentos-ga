@@ -4,7 +4,7 @@
 // - Leé cada paso y escribí tu código donde se indica.
 // - Usá `console.log()` para ver los resultados.
 // - Ejecutá este archivo con el comando: node 1-introduccion-asincronismo.js
-
+console.log("Hola Mundo je")
 //--------------------------------------------------
 // 1. Entendé la ejecución sincrónica
 //--------------------------------------------------
