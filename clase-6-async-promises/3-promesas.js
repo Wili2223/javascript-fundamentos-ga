@@ -14,8 +14,11 @@
 // - Luego de 2 segundos usando setTimeout
 // - Usá `.then()` para mostrar el resultado
 // - Usá `.finally()` para mostrar siempre: "🎉 Promesa procesada"
-const miPromesa = null;
-
+//const miPromesa = null;
+const miPromesa = new Promise(res => setTimeout(() => res("¡Promesa resuelta!"), 2000));
+miPromesa
+  .then(msg => console.log(msg))
+  .finally(() => console.log("🎉 Promesa procesada"));
 
 //--------------------------------------------------
 // 2. Promesa rechazada y manejo de errores
@@ -26,7 +29,9 @@ const miPromesa = null;
 // - Luego de 1 segundo usando setTimeout
 // - Usá `.catch()` para mostrar el error
 
-const promesaFallida = null;
+const promesaFallida = new Promise((_, rej) => setTimeout(() => rej("❌ Ocurrió un error"), 1000));
+promesaFallida
+  .catch(err => console.log(err));
 
 //--------------------------------------------------
 // 3. ¿Qué es una promesa?
@@ -35,6 +40,8 @@ const promesaFallida = null;
 // 👉 Paso 3: Escribí una definición corta en COMENTARIO con tus palabras:
 // ¿Qué es una promesa en JavaScript?
 
+// Una promesa en JavaScript es un objeto que representa el resultado eventual
+// (éxito o fracaso) de una operación asíncrona.
 
 //--------------------------------------------------
 // 4. Reflexión sobre estados y métodos
@@ -46,6 +53,9 @@ const promesaFallida = null;
 // 👉 Paso 5: Respondé como COMENTARIO:
 // ¿Qué diferencia hay entre el código que se coloca en `.then()` y en `.catch()`?
 
+// Los tres estados posibles de una promesa son: pending, fulfilled y rejected.
+// .then() maneja el resultado cuando la promesa se cumple,
+// mientras que .catch() maneja el error cuando se rechaza.
 
 //--------------------------------------------------
 // 5. Múltiple choice (descomentá la opción correcta)
@@ -56,18 +66,18 @@ const promesaFallida = null;
 let respuestaMC1;
 // respuestaMC1 = 'A'; // A. fulfilled
 // respuestaMC1 = 'B'; // B. rejected
-// respuestaMC1 = 'C'; // C. pending
+ respuestaMC1 = 'C'; // C. pending
 
 // ❓ ¿Qué método se ejecuta si la promesa se resuelve correctamente?
 let respuestaMC2;
 // respuestaMC2 = 'A'; // A. .catch()
-// respuestaMC2 = 'B'; // B. .then()
+ respuestaMC2 = 'B'; // B. .then()
 // respuestaMC2 = 'C'; // C. .finally()
 
 // ❓ ¿Qué método se ejecuta tanto si la promesa fue resuelta como rechazada?
 let respuestaMC3;
 // respuestaMC3 = 'A'; // A. .then()
-// respuestaMC3 = 'B'; // B. .finally()
+ respuestaMC3 = 'B'; // B. .finally()
 // respuestaMC3 = 'C'; // C. .catch()
 
 
@@ -76,9 +86,9 @@ let respuestaMC3;
 // 6. Verdadero o falso
 //--------------------------------------------------
 
-let respuestaP1; // "Una promesa puede tener más de un estado al mismo tiempo"
-let respuestaP2; // "Podemos encadenar varios .then() para procesar datos en pasos"
-let respuestaP3; // "El método .catch() solo se ejecuta si hubo un error o rechazo"
+let respuestaP1 = false; // "Una promesa puede tener más de un estado al mismo tiempo"
+let respuestaP2 = true; // "Podemos encadenar varios .then() para procesar datos en pasos"
+let respuestaP3 = true; // "El método .catch() solo se ejecuta si hubo un error o rechazo"
 
 //--------------------------------------------------
 // No modifiques el código debajo de este comentario
