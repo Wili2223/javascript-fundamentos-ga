@@ -84,10 +84,10 @@
 
 // ✅ Tip: Completá la función `getUsers` para resolver este paso.
 
-async function getUsers(url) {
+async function getUsers() {
   // TU CÓDIGO AQUÍ ⬇️
     try {
-    const res = await fetch(url);                 
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");                 
     if (!res.ok) throw new Error(res.status);     
     const data = await res.json();                
     console.log("✅ Usuarios:", data);            
@@ -95,7 +95,6 @@ async function getUsers(url) {
     } catch (err) {
     console.log("❌ Error:", err);                
   }
-  
 };
 
 
@@ -108,10 +107,10 @@ async function getUsers(url) {
 
 // ✅ Tip: Completá la función `createUser` para resolver este paso.
 
-async function createUser(url, data) {
+async function createUser( data) {
   // TU CÓDIGO AQUÍ ⬇️
     try {
-    const res = await fetch(url, {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -124,6 +123,7 @@ async function createUser(url, data) {
     throw err;
   }
 };
+createUser()
 
 
 //--------------------------------------------------
