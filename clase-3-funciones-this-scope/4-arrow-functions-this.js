@@ -15,17 +15,20 @@ function saludar(nombre) {
   return `Hola, ${nombre}!`;
 }
 // Reescribí la función anterior como una Arrow Function y guardala en la variable 'saludarArrow'.
+const saludarArrow = (nombre) => `Hola, ${nombre}!`;
 
 // 👉 Paso 2: Mostrá en consola el resultado de llamar a 'saludarArrow' con el argumento "Mundo".
-
+console.log(saludarArrow("Mundo"));
 //--------------------------------------------------
 // 2. Arrow Functions con un solo parámetro
 //--------------------------------------------------
 
 // 👉 Paso 3: Declarar una Arrow Function llamada 'alCuadrado' que reciba un número y retorne su cuadrado.
 // Nota: Usá la sintaxis más corta posible (sin paréntesis si es un solo parámetro).
+const alCuadrado = n => n * n;
 
 // 👉 Paso 4: Mostrá en consola el resultado de llamar a 'alCuadrado' con el argumento 4.
+console.log(alCuadrado(4));
 
 //--------------------------------------------------
 // 3. Enlace Léxico de this
@@ -35,11 +38,25 @@ function saludar(nombre) {
 // - nombre: "Juan"
 // - edad: 30
 // - saludar: una función tradicional que retorne "Hola, soy Juan y tengo 30 años."
+let persona = {
+  nombre: "Juan",
+  edad: 30,
+  saludar: function() {
+    return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+  },
+  
 
 // 👉 Paso 6: Agregá al objeto 'persona' un metodo llamado 'saludarArrow' que sea una Arrow Function.
 // Esta función debe retornar "Hola, soy Juan y tengo 30 años." pero usando el enlace léxico de this.
+  saludarArrow: () => {
+    return `Hola, soy ${persona.nombre} y tengo ${persona.edad} años.`;
+  }
+};
 
 // 👉 Paso 7: Mostrá en consola el resultado de llamar a 'persona.saludar()' y 'persona.saludarArrow()' para que observes la diferencia.
+console.log(persona.saludar());     
+console.log(persona.saludarArrow()); 
+
 //--------------------------------------------------
 // 4. Selección de opción correcta: Arrow Functions
 //--------------------------------------------------
@@ -49,14 +66,14 @@ function saludar(nombre) {
 // Opción A: Las Arrow Functions tienen su propio contexto de this.
 // Opción B: Las Arrow Functions heredan el contexto de this del lugar donde fueron definidas.
 // Opción C: Las Arrow Functions no pueden recibir parámetros.
-let respuestaArrow1 = '';
+let respuestaArrow1 = "B";
 
 // 👉 Paso 9: Seleccioná la opción correcta sobre cuándo usar Arrow Functions:
 // Guardá la letra de la opción correcta en la variable 'respuestaArrow2'. Ejemplo: let respuestaArrow2 = "C";
 // Opción A: Cuando necesitamos un this dinámico que cambie según cómo se llame la función.
 // Opción B: Cuando queremos que this sea el mismo que el contexto donde se definió la función.
 // Opción C: Cuando queremos que la función siempre retorne un valor numérico.
-let respuestaArrow2 = '';
+let respuestaArrow2 = "B";
 
 //--------------------------------------------------
 // 5. Diferencia práctica entre funciones tradicionales(declarativas y de expresión) y Arrow Functions
@@ -66,7 +83,7 @@ let respuestaArrow2 = '';
 // Opción A: Las funciones tradicionales heredan el this del contexto donde fueron definidas, mientras que las Arrow Functions tienen su propio this.
 // Opción B: Las funciones tradicionales tienen su propio this, mientras que las Arrow Functions heredan el this del contexto donde fueron definidas.
 // Opción C: Ambas tienen el mismo comportamiento respecto a this.
-let respuestaArrow3 = '';
+let respuestaArrow3 = "B";
 
 // No modifiques el código debajo de este comentario
 module.exports = {
