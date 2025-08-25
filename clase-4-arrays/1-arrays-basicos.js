@@ -10,7 +10,7 @@
 //--------------------------------------------------
 
 // 👉 Paso 1: Creá un array llamado 'numeros' que contenga los números del 1 al 5.
-
+let numeros = [1, 2, 3, 4, 5]
 
 // 👉 Paso 2: Creá un array llamado 'mixto' que contenga diferentes tipos de datos:
 // - Un número
@@ -18,7 +18,7 @@
 // - Un booleano
 // - Un objeto simple { clave: valor }
 // - Otro array
-
+let mixto = [1, "wili", true, {clave: "valor" }, [1, 2, 3]];
 
 //--------------------------------------------------
 // 2. Acceso a elementos
@@ -28,9 +28,9 @@
 // - primerNumero: el primer elemento
 // - ultimoNumero: el último elemento
 // - numeroMedio: el elemento del medio
-let primerNumero;
-let ultimoNumero;
-let numeroMedio;
+let primerNumero = numeros[0];                        
+let ultimoNumero = numeros[numeros.length - 1];       
+let numeroMedio = numeros[Math.floor(numeros.length / 2)];
 
 
 //--------------------------------------------------
@@ -42,21 +42,21 @@ let numeroMedio;
 // Opción A: Una colección ordenada de elementos que puede contener cualquier tipo de dato.
 // Opción B: Un objeto que solo puede contener números.
 // Opción C: Una variable que solo puede contener strings.
-let respuestaArray1 = '';
+let respuestaArray1 = 'A';
 
 // 👉 Paso 5: Seleccioná la opción correcta sobre los índices en Arrays:
 // Guardá la letra de la opción correcta en la variable 'respuestaArray2'.
 // Opción A: Los índices siempre comienzan en 1.
 // Opción B: Los índices comienzan en 0.
 // Opción C: Los índices pueden comenzar en cualquier número.
-let respuestaArray2 = '';
+let respuestaArray2 = 'B';
 
 // 👉 Paso 6: Seleccioná la opción correcta sobre el acceso a elementos:
 // Guardá la letra de la opción correcta en la variable 'respuestaArray3'.
 // Opción A: Solo se puede acceder al primer y último elemento.
 // Opción B: Se puede acceder a cualquier elemento usando su índice entre paréntesis.
 // Opción C: Se puede acceder a cualquier elemento usando su índice entre corchetes.
-let respuestaArray3 = '';
+let respuestaArray3 = 'C';
 
 //--------------------------------------------------
 // 4. Comprobación práctica
@@ -67,9 +67,10 @@ let respuestaArray3 = '';
 // - El número 42
 // - El booleano true
 // - El array [1, 2, 3]
-
+let datos = ["Hola", 42, true, [1, 2, 3]];
 
 // 👉 Paso 8: Mostrá en consola el segundo elemento del array 'datos'.
+console.log(datos[0]);
 
 // No modifiques el código debajo de este comentario
 module.exports = {
