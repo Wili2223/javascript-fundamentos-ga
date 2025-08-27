@@ -3,7 +3,7 @@
 // - Abrí index.html en tu navegador y trabajá sobre este archivo.
 // - Completá los pasos y respondé en comentarios donde se indique.
 // - Este ejercicio no tiene test
-console.log("hola mundo")
+
 //--------------------------------------------------
 // 1. Fundamentos del DOM
 //--------------------------------------------------
@@ -96,6 +96,7 @@ document.querySelectorAll(".item")[0].classList.add("activo");
 // TU CÓDIGO AQUÍ ⬇️
 const nuevoItem = document.createElement("li");
 nuevoItem.textContent = "Pan";
+nuevoItem.classList.add("item")
 document.getElementById("lista-compras").appendChild(nuevoItem);
 
 // 👉 Paso 12: Eliminá el primer elemento <li> de la lista.
@@ -114,7 +115,10 @@ lista.removeChild(lista.firstElementChild);
 
 // TU CÓDIGO AQUÍ ⬇️
 document.getElementById("btn-cambiar-fondo")
-  .addEventListener("click", () => document.body.style.backgroundColor = "lightblue");
+  .addEventListener("click", () => {
+    localStorage.setItem("fondo", "red");
+    document.body.style.backgroundColor = "red"
+  } );
 
 // 👉 Paso 14: Prevení que un enlace con id "link-google" navegue, y en cambio mostrale un alert().
 // ✅ Tip: event.preventDefault()
@@ -170,14 +174,14 @@ formContacto.addEventListener("submit", async e => {
 });
 
 
---------------------------------------------------
+//--------------------------------------------------
 // 6. Bonus: Guardar datos en Local Storage
 //--------------------------------------------------
 
 // 👉 Paso 17: Guardá en localStorage el último color de fondo elegido para la página
 // Al recargar, restaurá ese color automáticamente
 // TU CÓDIGO AQUÍ ⬇️
-
+document.body.style.backgroundColor = localStorage.getItem("fondo") || "#fff";
 
 //--------------------------------------------------
 // 7. Aplicación en tu Proyecto de Formularios
@@ -192,6 +196,29 @@ formContacto.addEventListener("submit", async e => {
 // ✅ Tip: No modifiques el HTML original, hacé todos los cambios con JS.
 
 // TU CÓDIGO AQUÍ ⬇️
+// 1. Cambiar color del título
+document.querySelector("h1").style.color = "blue";
+
+// 2. Cambiar texto de un label
+document.querySelector("label[for='nombre']").textContent = "Tu nombre completo:";
+
+// 3. Mostrar datos al enviar
+const form = document.getElementById("form-ejemplo");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const datos = Object.fromEntries(new FormData(form));
+  alert(`Datos enviados:\n${JSON.stringify(datos, null, 2)}`);
+});
+
+// 4. Botón para cambiar fondo del formulario
+const btn = document.createElement("button");
+btn.textContent = "Cambiar fondo";
+form.appendChild(btn);
+
+btn.addEventListener("click", e => {
+  e.preventDefault();
+  form.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+});
 
 
 //--------------------------------------------------
@@ -201,7 +228,7 @@ formContacto.addEventListener("submit", async e => {
 // 👉 Paso 19: ¿Cuál de estas afirmaciones sobre el DOM es verdadera?
 // Comentá la opción correcta y guardá la letra en `respuestaDOM1`
 
-let respuestaDOM1;
+let respuestaDOM1 = "B";
 // respuestaDOM1 = 'A'; El DOM es un archivo separado que el navegador descarga.
 // respuestaDOM1 = 'B'; El DOM es una representación en memoria de la estructura HTML.
 // respuestaDOM1 = 'C'; El DOM solo existe en Node.js.
