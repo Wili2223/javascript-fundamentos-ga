@@ -12,11 +12,7 @@
 // 👉 Paso 1: Creá una promesa llamada 'miPromesa' que:
 // - Se resuelva con el mensaje: "✅ Promesa cumplida"
 // - Luego de 2 segundos usando setTimeout
-// - Usá `.then()` para mostrar el resultado
-// - Usá `.finally()` para mostrar siempre: "🎉 Promesa procesada"
-const miPromesa = null;
-
-
+// - Usá `.then()` para mostrar el res
 //--------------------------------------------------
 // 2. Promesa rechazada y manejo de errores
 //--------------------------------------------------
