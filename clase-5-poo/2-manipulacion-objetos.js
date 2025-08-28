@@ -36,14 +36,14 @@ delete auto.modelo;
 //--------------------------------------------------
 
 // 👉 Paso 6: Creá una función llamada 'crearLibro' que reciba título, autor y año, y retorne un objeto libro con esas propiedades.
-function crearLibro(titulo, autor, anio){
-   return { titulo, autor, "año": anio };
+function crearLibro(titulo, autor, año){
+   return { titulo, autor, "año": año  };
 }
 
 // 👉 Paso 7: Creá una función llamada 'actualizarPropiedad' que reciba un objeto, el nombre de una propiedad y un nuevo valor, y actualice esa propiedad en el objeto.
 function actualizarPropiedad(objeto, propiedad, nuevoValor) {
   objeto[propiedad] = nuevoValor;
-  return objeto; // 
+  return objeto; 
 }
 
 // 👉 Paso 8: Creá una función llamada 'eliminarPropiedad' que reciba un objeto y el nombre de una propiedad, y elimine esa propiedad del objeto.
@@ -87,31 +87,9 @@ let respuestaObj2 = 'A';
 // 3. Eliminar la propiedad 'autor' del libro usando la función eliminarPropiedad.
 // 4. Contar cuántas propiedades tiene el libro usando la función contarPropiedades.
 // Mostrá los resultados en consola.
-function crearLibro(titulo, autor, anio) {
-  return { titulo, autor, "año": anio };
-}
-
-function actualizarPropiedad(objeto, propiedad, nuevoValor) {
-  objeto[propiedad] = nuevoValor;
-  return objeto;
-}
-
-function eliminarPropiedad(objeto, propiedad) {
-  delete objeto[propiedad];
-  return objeto;
-}
-
-function contarPropiedades(objeto) {
-  return Object.keys(objeto).length;
-}
-
-const libro = crearLibro(
-  "El Principito",
-  "Antoine de Saint-Exupéry",
-  1943
-);
-
+ libro = crearLibro("El Principito", "Antoine de Saint-Exupéry", 1943);
 console.log("1) Libro creado:", libro);
+
 actualizarPropiedad(libro, "año", 1950);
 console.log("2) Después de actualizar año:", libro);
 
@@ -120,6 +98,7 @@ console.log("3) Después de eliminar autor:", libro);
 
 const cantidad = contarPropiedades(libro);
 console.log("4) Cantidad de propiedades:", cantidad);
+
 
 module.exports = {
   auto,
