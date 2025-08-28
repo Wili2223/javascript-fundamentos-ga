@@ -43,16 +43,16 @@ console.log(mascota2.presentarse());
 //--------------------------------------------------
 
 // 👉 Paso 6: Creá una función constructora llamada Libro que reciba título, autor y año, y asigne esas propiedades usando this.
-function Libro(titulo, autor, anio) {
+function Libro(titulo, autor, año) {
   this.titulo = titulo;
   this.autor = autor;
-  this.anio = anio;
+  this.año = año;
 }
 
 // 👉 Paso 7: Agregá un método al prototype de Libro llamado 'resumen' que retorne un string con el formato: 
 // "El libro [título] de [autor] fue publicado en [año]".
 Libro.prototype.resumen = function() {
-  return `El libro ${this.titulo} de ${this.autor} fue publicado en ${this.anio}`;
+  return `El libro ${this.titulo} de ${this.autor} fue publicado en ${this.año}`;
 };
 
 // 👉 Paso 8: Creá un array llamado 'biblioteca' y agregá al menos 3 libros usando la función constructora.
@@ -95,7 +95,13 @@ function crearMascotasDesdeArray(arr) {
 }
 
 // 👉 Paso 13: Usá la función anterior con el array:
-const arrayMascotas = [{nombre: "Rocky", especie: "perro"}, {nombre: "Pelusa", especie: "gato"}]
+const arrayMascotas = [
+  {nombre: "Rocky", especie: "perro"}, 
+  {nombre: "Pelusa", especie: "gato"}
+];
+
+const mascotas = crearMascotasDesdeArray(arrayMascotas);
+
 // Mostrá en consola el nombre y la especie de cada mascota creada.
 mascotas.forEach(m => {
   console.log(`Nombre: ${m.nombre}, Especie: ${m.especie}`);
