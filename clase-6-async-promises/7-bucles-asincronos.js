@@ -52,10 +52,9 @@ const mostrarUsuariosSecuencialmente = async () => {
 async function mostrarUsuariosEnParalelo() {
   // 👉 Usá Promise.all() para pedir todos los usuarios a la vez
   // Mostrá sus nombres por consola
-  const mostrarUsuariosEnParalelo = async () => {
     const users = await Promise.all(userIds.map(id => getUserById(id)));
     users.forEach(user => console.log("Paralelo:", user.name));
-  };
+  
 }
 
 //--------------------------------------------------
