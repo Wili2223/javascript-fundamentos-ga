@@ -86,7 +86,7 @@ async function mostrarUsuariosEnParalelo() {
 //--------------------------------------------------
 // Exportar para tests (opcional)
 //--------------------------------------------------
-console.log("hola")
+
 
 
 module.exports = {
