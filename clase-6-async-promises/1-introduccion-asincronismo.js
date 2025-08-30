@@ -49,7 +49,7 @@ console.log("Esperando que termine la tarea...");
 // 👉 Paso 5: Respondé si estas afirmaciones son verdaderas o falsas:
 // Guardá un booleano en tus respuestas en las variables correspondientes.
 
-let respuesta1 = true; // "JavaScript ejecuta todo el código al mismo tiempo sin esperar tareas lentas."
+let respuesta1 = false; // "JavaScript ejecuta todo el código al mismo tiempo sin esperar tareas lentas."
 let respuesta2 = true; // "setTimeout permite simular tareas que se ejecutan después de cierto tiempo."
 let respuesta3 = false; // "El código que está después de setTimeout se bloquea hasta que el tiempo se cumple."
 

@@ -34,14 +34,15 @@ async function getUserById(id) {
 // 📌 Tip: Podés armar un array de promesas como:
 // const promesas = userIds.map(id => getUserById(id));
 
-async function mostrarUsuariosSecuencialmente() {
+const mostrarUsuariosSecuencialmente = async () => {
+    for await (const id of userIds) {
+        const user = await getUserById(id);
+        console.log("Secuencial:", user.name);
+    }
+};
   // 👉 Iterá usando for await...of sobre el array de promesas
   // Mostrá solo el nombre del usuario por consola
-  const mostrarUsuariosSecuencialmente = async () => {
-    const promesas = userIds.map(id => getUserById(id));
-    for await (const user of promesas) console.log("Secuencial:", user.name);
-  };
-}
+
 
 //--------------------------------------------------
 // Paso 4: Usar Promise.all() para pedir los usuarios en paralelo.
