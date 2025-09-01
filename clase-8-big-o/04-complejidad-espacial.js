@@ -15,7 +15,7 @@ function crearArray(n) {
   }
   return arr;
 }
-let respuestaAlgoritmo1;
+let respuestaAlgoritmo1 = 'B';
 // respuestaAlgoritmo1 = 'A'; // A. O(1)
 // respuestaAlgoritmo1 = 'B'; // B. O(n)
 // respuestaAlgoritmo1 = 'C'; // C. O(n²)
@@ -27,7 +27,7 @@ function sumaPrimerosDos(arr) {
   let suma = arr[0] + arr[1]; // solo 1 variable extra
   return suma;
 }
-let respuestaAlgoritmo2;
+let respuestaAlgoritmo2 = 'A';
 // respuestaAlgoritmo2 = 'A'; // A. O(1)
 // respuestaAlgoritmo2 = 'B'; // B. O(n)
 // respuestaAlgoritmo2 = 'C'; // C. O(n²)
@@ -41,7 +41,7 @@ function duplicarArray(arr) {
   }
   return nuevo;
 }
-let respuestaAlgoritmo3;
+let respuestaAlgoritmo3 = 'B';
 // respuestaAlgoritmo3 = 'A'; // A. O(1)
 // respuestaAlgoritmo3 = 'B'; // B. O(n)
 // respuestaAlgoritmo3 = 'C'; // C. O(n²)
@@ -55,7 +55,7 @@ function encontrarMax(arr) {
   }
   return max;
 }
-let respuestaAlgoritmo4;
+let respuestaAlgoritmo4 = 'A';
 // respuestaAlgoritmo4 = 'A'; // A. O(1)
 // respuestaAlgoritmo4 = 'B'; // B. O(n)
 // respuestaAlgoritmo4 = 'C'; // C. O(n²)
@@ -67,19 +67,22 @@ let respuestaAlgoritmo4;
 //--------------------------------------------------
 // 👉 Paso 2: Escribí un ejemplo de código con complejidad espacial O(1)
 // (Opcional, para practicar)
-
+function ejemploO1(n) {
+  let a = n * 2;
+  return a;
+}
 
 //--------------------------------------------------
 // 3. Teoría
 //--------------------------------------------------
 // ❓ ¿Qué es la complejidad espacial?
-let respuestaTeoria1;
+let respuestaTeoria1 = 'A';
 // respuestaTeoria1 = 'A'; // A. Mide cuánta memoria extra usa un algoritmo
 // respuestaTeoria1 = 'B'; // B. Mide cuántos pasos ejecuta un algoritmo
 // respuestaTeoria1 = 'C'; // C. Mide la velocidad de la red
 
 // ❓ ¿Por qué es importante considerar la complejidad espacial?
-let respuestaTeoria2;
+let respuestaTeoria2 = 'A';
 // respuestaTeoria2 = 'A'; // A. Porque afecta el uso de memoria y la escalabilidad
 // respuestaTeoria2 = 'B'; // B. Porque afecta el color de la interfaz
 // respuestaTeoria2 = 'C'; // C. Porque mejora la usabilidad
