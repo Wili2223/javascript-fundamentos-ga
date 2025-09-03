@@ -6,6 +6,13 @@
 //--------------------------------------------------
 // 👉 Paso 1: Escribí en comentario qué significa O(1), O(n), O(n²), O(log n), O(2ⁿ), O(n!)
 
+// - O(1) (Constante): El tiempo de ejecución es el mismo, sin importar el tamaño de los datos de entrada.
+// - O(n) (Lineal): El tiempo de ejecución crece de forma proporcional al tamaño de la entrada.
+// - O(n²) (Cuadrática): El tiempo de ejecución crece al cuadrado del tamaño de la entrada.
+// - O(log n) (Logarítmica): El tiempo de ejecución crece muy lentamente.
+// - O(2ⁿ) (Exponencial): El tiempo de ejecución se duplica con cada nuevo elemento.
+// - O(n!) (Factorial): El tiempo de ejecución es extremadamente lento.
+
 //--------------------------------------------------
 // 2. Identifica la notación
 //--------------------------------------------------
@@ -16,7 +23,7 @@ function sumaUno(arr) {
   }
 }
 // ❓ Elegí la opción correcta:
-let respuestaAlgoritmo1;
+let respuestaAlgoritmo1 = 'B';
 // respuestaAlgoritmo1 = 'A'; // A. O(1)
 // respuestaAlgoritmo1 = 'B'; // B. O(n)
 // respuestaAlgoritmo1 = 'C'; // C. O(n²)
@@ -33,7 +40,7 @@ function sumaTodos(arr) {
   return total;
 }
 // ❓ Elegí la opción correcta:
-let respuestaAlgoritmo2;
+let respuestaAlgoritmo2 = 'B';
 // respuestaAlgoritmo2 = 'A'; // A. O(n)
 // respuestaAlgoritmo2 = 'B'; // B. O(n²)
 // respuestaAlgoritmo2 = 'C'; // C. O(log n)
@@ -42,7 +49,7 @@ let respuestaAlgoritmo2;
 // 3. Múltiple choice
 //--------------------------------------------------
 // ❓ ¿Cuál es el caso que describe Big-O?
-let respuestaMC1;
+let respuestaMC1 = 'B';
 // respuestaMC1 = 'A'; // A. El mejor caso
 // respuestaMC1 = 'B'; // B. El peor caso
 // respuestaMC1 = 'C'; // C. El promedio

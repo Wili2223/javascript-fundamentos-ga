@@ -17,7 +17,7 @@ function maximo(arr) {
   }
   return max;
 }
-let respuestaAlgoritmo1;
+let respuestaAlgoritmo1 = 'B';
 // respuestaAlgoritmo1 = 'A'; // A. O(1)
 // respuestaAlgoritmo1 = 'B'; // B. O(n)
 // respuestaAlgoritmo1 = 'C'; // C. O(n²)
@@ -32,7 +32,7 @@ function imprimirCuadrados(n) {
   }
 }
 
-let respuestaAlgoritmo2;
+let respuestaAlgoritmo2 = 'B';
 // respuestaAlgoritmo2 = 'A'; // A. O(1)
 // respuestaAlgoritmo2 = 'B'; // B. O(n)
 // respuestaAlgoritmo2 = 'C'; // C. O(n²)
@@ -47,7 +47,7 @@ function pares(arr) {
   return resultado;
 }
 
-let respuestaAlgoritmo3;
+let respuestaAlgoritmo3 = 'A';
 // respuestaAlgoritmo3 = 'A'; // A. O(n)
 // respuestaAlgoritmo3 = 'B'; // B. O(n²)
 // respuestaAlgoritmo3 = 'C'; // C. O(1)
@@ -71,7 +71,7 @@ function posicionInsercionOrdenada(arr, objetivo) {
   return inicio; // índice donde se insertaría
 }
 
-let respuestaAlgoritmo4;
+let respuestaAlgoritmo4 = 'B';
 // respuestaAlgoritmo4 = 'A'; // A. O(n)
 // respuestaAlgoritmo4 = 'B'; // B. O(log n)
 // respuestaAlgoritmo4 = 'C'; // C. O(n²)
@@ -81,9 +81,9 @@ let respuestaAlgoritmo4;
 //--------------------------------------------------
 // 2. Verdadero o falso
 //--------------------------------------------------
-let respuestaVF1; // "La complejidad temporal mide los pasos que ejecuta un algoritmo"
-let respuestaVF2; // "Un algoritmo O(n²) es más rápido que uno O(n) para datos grandes"
-let respuestaVF3; // "La complejidad temporal mide la memoria que consume un algoritmo"
+let respuestaVF1 = true; // "La complejidad temporal mide los pasos que ejecuta un algoritmo"
+let respuestaVF2 = false; // "Un algoritmo O(n²) es más rápido que uno O(n) para datos grandes"
+let respuestaVF3 = false; // "La complejidad temporal mide la memoria que consume un algoritmo"
 
 //--------------------------------------------------
 // No modifiques el código debajo de este comentario
